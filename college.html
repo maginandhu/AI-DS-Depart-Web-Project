@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About College | CKEC</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    background:linear-gradient(135deg,#eef4f9,#f8fbff);
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= HEADER ================= */
+.header{
+    background:linear-gradient(135deg,#000,#1f2933);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:16px;
+    opacity:.9;
+}
+
+/* ================= MAIN ================= */
+.container{
+    flex:1;
+    padding:60px 20px;
+}
+
+.wrapper{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ================= COLLEGE CARD ================= */
+.college-card{
+    background:#fff;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ================= TOP ================= */
+.top{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.text{
+    flex:1;
+}
+
+.text h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.text p{
+    font-size:15px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:15px;
+}
+
+/* ================= 3D IMAGE ================= */
+.illustration{
+    flex:1;
+    text-align:center;
+}
+
+.illustration img{
+    width:300px;
+    max-width:100%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-18px)}
+    100%{transform:translateY(0)}
+}
+
+/* ================= FEATURES ================= */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.feature{
+    background:#f9fbff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    background:#000;
+    color:#fff;
+}
+
+.feature h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* ================= BUTTONS ================= */
+.buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 26px;
+    background:#000;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#333;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.footer span{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+    <h1>About Our College 🏫</h1>
+    <p>Christ The King Engineering College</p>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="container">
+    <div class="wrapper">
+
+        <div class="college-card">
+
+            <div class="top">
+                <div class="text">
+                    <h2>Christ The King Engineering College 🎓</h2>
+                    <p>
+                        Christ The King Engineering College (CKEC) is committed to
+                        <strong>academic excellence, innovation, and holistic student development</strong>.
+                        The institution provides a vibrant learning environment supported by
+                        experienced faculty and modern infrastructure.
+                    </p>
+                    <p>
+                        The college emphasizes research, industry collaboration,
+                        skill development and ethical values to shape future-ready
+                        engineers and responsible leaders.
+                    </p>
+                </div>
+
+                <!-- 3D IMAGE -->
+                <div class="illustration">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="College Illustration">
+                </div>
+            </div>
+
+            <!-- ================= FEATURES ================= -->
+            <div class="features">
+
+                <div class="feature">
+                    <h3>🏢 Infrastructure</h3>
+                    <p>Modern classrooms, laboratories, library and campus facilities.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>👨‍🏫 Experienced Faculty</h3>
+                    <p>Highly qualified and industry-experienced teaching staff.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🔬 Research & Innovation</h3>
+                    <p>Encouraging research culture, projects and publications.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🤝 Industry Connect</h3>
+                    <p>Industry collaborations, MoUs and placement support.</p>
+                </div>
+
+            </div>
+
+            <!-- ================= BUTTONS ================= -->
+            <div class="buttons">
+                <a href="https://www.ckec.ac.in/" target="_blank" class="btn">
+                    🌐 Visit Official Website
+                </a>
+                <a href="home.html" class="btn">
+                    ⬅ Back to Home
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <p>© 2025 <span>Artificial Intelligence & Data Science - CKEC</span></p>
+    <p>Designed & Developed by <span>Maginandhu, Dayanand T.C</span></p>
+    <p>Email: maginandhu9786@gmail.com</p>
+</div>
+
+</body>
+</html>

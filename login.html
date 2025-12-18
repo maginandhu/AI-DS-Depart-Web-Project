@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | AI & DS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#eef4ff;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#fff;
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    background:#000;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* LOGIN BOX */
+.login-box{
+    width:360px;
+    background:#fff;
+    margin:100px auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+.login-box h2{
+    margin-bottom:20px;
+}
+
+select, input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.error{
+    display:none;
+    margin-top:12px;
+    padding:10px;
+    background:#fee2e2;
+    color:#b91c1c;
+    border-radius:8px;
+}
+/* ================= FOOTER ================= */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+    margin-top:60px;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.footer span{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">AI</div>
+    <div>
+        <strong>Department of AI & DS</strong><br>
+        <small>CKEC, Coimbatore</small>
+    </div>
+</div>
+
+<!-- LOGIN FORM -->
+<div class="login-box" id="loginBox">
+    <h2>Login</h2>
+
+    <select id="role">
+        <option value="">Select Role</option>
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+    </select>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div class="error" id="error"></div>
+</div>
+
+<script>
+function login(){
+    const role = document.getElementById("role").value;
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value.trim();
+    const error = document.getElementById("error");
+
+    error.style.display = "none";
+
+    if(!role || !user || !pass){
+        showError("All fields are required");
+        return;
+    }
+
+    // DEMO CREDENTIAL CHECK
+    if(
+        (role === "student" && user === "student" && pass === "1234") ||
+        (role === "faculty" && user === "faculty" && pass === "1234")
+    ){
+        // SAVE LOGIN STATE (OPTIONAL)
+        localStorage.setItem("loggedInUser", user);
+        localStorage.setItem("role", role);
+
+        // ✅ NAVIGATE TO INDEX PAGE
+        window.location.href = "home.html";
+    } else {
+        showError("Invalid username or password");
+    }
+}
+
+function showError(msg){
+    const error = document.getElementById("error");
+    error.innerText = msg;
+    error.style.display = "block";
+}
+</script>
+
+</body>
+</html>

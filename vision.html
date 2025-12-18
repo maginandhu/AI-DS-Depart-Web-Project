@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision & Mission | AI & DS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    background:linear-gradient(135deg,#eef4f9,#f8fbff);
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= HEADER ================= */
+.header{
+    background:linear-gradient(135deg,#000,#1f2933);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:16px;
+    opacity:.9;
+}
+
+/* ================= MAIN ================= */
+.container{
+    flex:1;
+    padding:60px 20px;
+}
+
+.wrapper{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ================= VISION / MISSION CARDS ================= */
+.section{
+    background:#fff;
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.top{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.text{
+    flex:1;
+}
+
+.text h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.text p, .text li{
+    font-size:15px;
+    line-height:1.8;
+    color:#444;
+}
+
+.text ul{
+    padding-left:20px;
+    margin-top:10px;
+}
+
+.text li{
+    margin-bottom:8px;
+}
+
+/* ================= 3D IMAGE ================= */
+.illustration{
+    flex:1;
+    text-align:center;
+}
+
+.illustration img{
+    width:300px;
+    max-width:100%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-18px)}
+    100%{transform:translateY(0)}
+}
+
+/* ================= MISSION GRID ================= */
+.mission-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.mission{
+    background:#f9fbff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.mission:hover{
+    transform:translateY(-8px);
+    background:#000;
+    color:#fff;
+}
+
+.mission h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* ================= BACK BUTTON ================= */
+.back-btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:10px 22px;
+    background:#000;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#333;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.footer span{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+    <h1>Vision & Mission 🎯</h1>
+    <p>Artificial Intelligence & Data Science</p>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="container">
+    <div class="wrapper">
+
+        <div class="section">
+
+            <!-- ================= VISION ================= -->
+            <div class="top">
+                <div class="text">
+                    <h2>Our Vision 🌍</h2>
+                    <p>
+                        To be a <strong>center of excellence</strong> in Artificial Intelligence and Data Science
+                        by fostering innovation, research, and industry-ready skills that shape
+                        responsible and intelligent technologies for the betterment of society.
+                    </p>
+                </div>
+
+                <!-- 3D IMAGE -->
+                <div class="illustration">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712040.png" alt="Vision AI">
+                </div>
+            </div>
+
+            <!-- ================= MISSION ================= -->
+            <h2 style="margin-top:50px">Our Mission 🚀</h2>
+
+            <div class="mission-grid">
+
+                <div class="mission">
+                    <h3>📘 Strong Foundations</h3>
+                    <p>Provide strong theoretical and practical foundations in AI, Data Science and computing.</p>
+                </div>
+
+                <div class="mission">
+                    <h3>🔬 Research & Innovation</h3>
+                    <p>Promote innovation, research mindset and problem-solving skills.</p>
+                </div>
+
+                <div class="mission">
+                    <h3>💻 Industry Readiness</h3>
+                    <p>Equip students with real-time projects, training and industry exposure.</p>
+                </div>
+
+                <div class="mission">
+                    <h3>⚖️ Ethical AI</h3>
+                    <p>Encourage ethical, sustainable and responsible AI practices.</p>
+                </div>
+
+                <div class="mission">
+                    <h3>🌐 Global Impact</h3>
+                    <p>Develop professionals contributing to national and global technological growth.</p>
+                </div>
+
+            </div>
+
+            <a href="home.html" class="back-btn">⬅ Back to Home</a>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <p>© 2025 <span>Artificial Intelligence & Data Science - CKEC</span></p>
+    <p>Designed & Developed by <span>Maginandhu, Dayanand T.C</span></p>
+    <p>Email: maginandhu9786@gmail.com</p>
+</div>
+
+</body>
+</html>

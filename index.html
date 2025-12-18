@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI & DS | CKEC</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#eef4ff;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#fff;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    background:#000;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.college-text h1{font-size:20px}
+.college-text p{font-size:13px;color:#555}
+
+.login-btn{
+    padding:10px 20px;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* CAROUSEL */
+.carousel{
+    width:90%;
+    max-width:900px;
+    height:380px;
+    margin:40px auto;
+    overflow:hidden;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.slides{
+    display:flex;
+    height:100%;
+    transition:transform 0.5s ease;
+}
+
+.slide{
+    min-width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;   /* KEY FIX */
+}
+
+/* DOTS */
+.dots{
+    display:flex;
+    justify-content:center;
+    margin-top:12px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    background:#aaa;
+    border-radius:50%;
+    margin:0 6px;
+    cursor:pointer;
+}
+
+.dot.active{background:#000}
+
+/* HERO */
+.hero{
+    text-align:center;
+    margin:30px 0;
+}
+
+.hero h2{font-size:30px}
+.hero p{color:#a7a7a7}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+    margin-top:60px;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.footer span{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <div class="logo">AI</div>
+        <div class="college-text">
+            <h1>Department of AI & DS</h1>
+            <p>Christ The King Engineering College, Coimbatore</p>
+        </div>
+    </div>
+    <button class="login-btn" onclick="location.href='login.html'">Login</button>
+</div>
+
+<!-- CAROUSEL -->
+<div class="carousel">
+    <div class="slides" id="slides">
+        <div class="slide"><img src="Source/1.jpg"></div>
+        <div class="slide"><img src="Source/2.jpg"></div>
+        <div class="slide"><img src="Source/3.jpg"></div>
+    </div>
+</div>
+
+<div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+</div>
+
+<div class="hero">
+    <h2>Welcome to AI & DS Department</h2>
+    <p>Academic Portal – Students & Faculty</p>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <p>© 2025 <span>Artificial Intelligence & Data Science - CKEC</span></p>
+    <p>Designed & Developed by <span>Maginandhu,Dayanand T.C</span></p>
+    <p>Email: maginandhu9786@gmail.com</p>
+</div>
+
+<script>
+let current = 0;
+const slides = document.getElementById("slides");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index){
+    current = index;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+setInterval(()=>{
+    current = (current + 1) % 3;
+    showSlide(current);
+}, 4000);
+</script>
+
+</body>
+</html>

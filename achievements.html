@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements | AI & DS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    background:linear-gradient(135deg,#eef4f9,#f8fbff);
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= HEADER ================= */
+.header{
+    background:linear-gradient(135deg,#000,#1f2933);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:16px;
+    opacity:.9;
+}
+
+/* ================= MAIN ================= */
+.container{
+    flex:1;
+    padding:60px 20px;
+}
+
+.wrapper{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ================= ACHIEVEMENTS CARD ================= */
+.achievements-card{
+    background:#fff;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ================= TOP ================= */
+.top{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.text{
+    flex:1;
+}
+
+.text h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.text p{
+    font-size:15px;
+    line-height:1.8;
+    color:#444;
+}
+
+/* ================= 3D IMAGE ================= */
+.illustration{
+    flex:1;
+    text-align:center;
+}
+
+.illustration img{
+    width:280px;
+    max-width:100%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-18px)}
+    100%{transform:translateY(0)}
+}
+
+/* ================= ACHIEVEMENT GRID ================= */
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.achievement{
+    background:#f9fbff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+    text-align:center;
+}
+
+.achievement:hover{
+    transform:translateY(-8px);
+    background:#000;
+    color:#fff;
+}
+
+.achievement h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.achievement p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ================= BACK BUTTON ================= */
+.back-btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:10px 22px;
+    background:#000;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#333;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.footer span{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+    <h1>Department Achievements 🏆</h1>
+    <p>Artificial Intelligence & Data Science</p>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="container">
+    <div class="wrapper">
+
+        <div class="achievements-card">
+
+            <div class="top">
+                <div class="text">
+                    <h2>Excellence & Recognition 🌟</h2>
+                    <p>
+                        The Department of AI & Data Science has achieved remarkable milestones
+                        in academics, research, innovation and industry collaboration,
+                        reflecting the dedication of our students and faculty.
+                    </p>
+                </div>
+
+                <!-- 3D IMAGE -->
+                <div class="illustration">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712083.png" alt="Achievements AI">
+                </div>
+            </div>
+
+            <!-- ================= ACHIEVEMENTS ================= -->
+            <div class="achievement-grid">
+
+                <div class="achievement">
+                    <h3>🏆 Hackathon Wins</h3>
+                    <p>National & inter-college level hackathon champions.</p>
+                </div>
+
+                <div class="achievement">
+                    <h3>📜 Research Publications</h3>
+                    <p>Papers published in Scopus & indexed journals.</p>
+                </div>
+
+                <div class="achievement">
+                    <h3>🥇 University Ranks</h3>
+                    <p>Consistent university rank holders every academic year.</p>
+                </div>
+
+                <div class="achievement">
+                    <h3>🤝 Industry MoUs</h3>
+                    <p>Collaborations with reputed technology companies.</p>
+                </div>
+
+                <div class="achievement">
+                    <h3>🚀 Student Startups</h3>
+                    <p>Innovative startups and product-based solutions.</p>
+                </div>
+
+            </div>
+
+            <a href="home.html" class="back-btn">⬅ Back to Home</a>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <p>© 2025 <span>Artificial Intelligence & Data Science - CKEC</span></p>
+    <p>Designed & Developed by <span>Maginandhu, Dayanand T.C</span></p>
+    <p>Email: maginandhu9786@gmail.com</p>
+</div>
+
+</body>
+</html>

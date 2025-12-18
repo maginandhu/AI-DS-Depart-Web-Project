@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | AI & DS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    background:linear-gradient(135deg,#eef4f9,#f8fbff);
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= HEADER ================= */
+.header{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#000,#1f2933);
+    color:#fff;
+}
+
+.header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:16px;
+    opacity:.9;
+}
+
+/* ================= MAIN ================= */
+.container{
+    flex:1;
+    padding:60px 20px;
+}
+
+/* ================= ABOUT CARD ================= */
+.about-card{
+    background:#fff;
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.about-top{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    font-size:15px;
+    line-height:1.8;
+    color:#444;
+}
+
+/* ================= 3D IMAGE ================= */
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    width:280px;
+    max-width:100%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+    100%{transform:translateY(0)}
+}
+
+/* ================= FEATURES ================= */
+.features{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#f9fbff;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    background:#000;
+    color:#fff;
+}
+
+.feature h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ================= BACK BUTTON ================= */
+.back-btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:10px 22px;
+    background:#000;
+    color:#fff;
+    border-radius:25px;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#333;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#000;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.footer p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.footer span{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+    <h1>About Our Department 🤖📊</h1>
+    <p>Artificial Intelligence & Data Science</p>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="container">
+    <div class="about-card">
+
+        <div class="about-top">
+            <div class="about-text">
+                <h2>Who We Are 🚀</h2>
+                <p>
+                    The Department of <strong>Artificial Intelligence and Data Science (AI & DS)</strong>
+                    at Christ The King Engineering College, Karamadai, is committed to nurturing
+                    innovative thinkers and industry-ready professionals.
+                    Our curriculum is designed to blend theory with real-world applications
+                    in intelligent systems and data-driven technologies.
+                </p>
+            </div>
+
+            <!-- 3D PNG IMAGE -->
+            <div class="about-image">
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Illustration">
+            </div>
+        </div>
+
+        <!-- ================= FEATURES ================= -->
+        <div class="features">
+
+            <div class="feature">
+                <h3>🤖 Artificial Intelligence</h3>
+                <p>Machine Learning, Deep Learning, Computer Vision and NLP.</p>
+            </div>
+
+            <div class="feature">
+                <h3>📊 Data Science</h3>
+                <p>Data Analytics, Big Data, Visualization and Predictive Modeling.</p>
+            </div>
+
+            <div class="feature">
+                <h3>☁️ Emerging Technologies</h3>
+                <p>Cloud Computing, IoT, Blockchain and AI-powered systems.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🏆 Student Excellence</h3>
+                <p>Projects, hackathons, research publications and industry internships.</p>
+            </div>
+
+        </div>
+
+        <a href="home.html" class="back-btn">⬅ Back to Home</a>
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <p>© 2025 <span>Artificial Intelligence & Data Science - CKEC</span></p>
+    <p>Designed & Developed by <span>Maginandhu, Dayanand T.C</span></p>
+    <p>Email: maginandhu9786@gmail.com</p>
+</div>
+
+</body>
+</html>
